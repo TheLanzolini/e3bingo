@@ -1,0 +1,10 @@
+html, body {
+  font-family: Arial, 'sans-serif';
+  text-align: center;
+}
+
+#app {
+  width: 960px;
+  margin: auto;
+  font-size: 24px;
+}
