@@ -30,12 +30,12 @@ var cards = {
   27: 'On stage music that shouldn\'t be there',
   28: 'Ambiguous Exclusively from Microsoft',
   29: 'KH3',
-  30: 'Hitman',
+  30: 'Hitman Gets Saved',
   31: 'Cuphead',
   32: 'Someone makes a nerd joke',
   33: 'Remastered Game',
   34: 'Movie Trailer',
-  35: 'PRE ORDER NOW!',
+  35: '"PRE ORDER NOW!"',
   36: 'New First Party Nintendo title',
   37: 'SMAYSH BRUDDAS',
   38: 'KNACK 2 BAYBEEE',
@@ -60,25 +60,26 @@ var shuffled = shuffleArray(keys);
 
 shuffled = shuffled.slice(0, 25);
 
+if(localStorage.getItem('config')){
+  shuffled = JSON.parse(localStorage.getItem('config')).shuffled;
+}else{
+  localStorage.setItem('config', JSON.stringify({
+    shuffled: shuffled
+  }))
+}
+
 function init(){
   var APP = document.getElementById('app');
-  while(APP.lastChild){
-    APP.removeChild(APP.lastChild);
-  }
-  if(localStorage.getItem('config')){
-    config = localStorage.getItem('config');
-  }
   var header = document.createElement('div');
   header.classList.add('header');
   var title = document.createElement('h1');
   title.innerHTML = 'E3 BINGO!';
   header.appendChild(title);
-  var about = document.createElement('div');
+  var about = document.createElement('a');
   about.classList.add('about');
   about.innerHTML = 'About';
-  about.addEventListener('click', function(){
-    location.replace('/about');
-  });
+  about.target="_blank";
+  about.href = 'http://lanzo.space/e3bingo/about';
   header.appendChild(about);
 
   APP.appendChild(header);

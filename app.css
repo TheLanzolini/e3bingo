@@ -66,3 +66,7 @@ h1 {
 .cell[cell="12"] {
   background-image: url('images/free.jpg') !important;
 }
+
+@media print{
+  * {-webkit-print-color-adjust:exact;}
+}
