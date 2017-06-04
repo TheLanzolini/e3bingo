@@ -56,14 +56,12 @@ function shuffleArray(array) {
 
 var keys = Object.keys(cards);
 
-var shuffled = shuffleArray(keys);
+var shuffled = shuffleArray(keys).slice(0, 25);
 
-shuffled = shuffled.slice(0, 25);
-
-if(localStorage.getItem('config')){
-  shuffled = JSON.parse(localStorage.getItem('config')).shuffled;
+if(localStorage.getItem('shuffled')){
+  shuffled = JSON.parse(localStorage.getItem('shuffled')).shuffled;
 }else{
-  localStorage.setItem('config', JSON.stringify({
+  localStorage.setItem('shuffled', JSON.stringify({
     shuffled: shuffled
   }))
 }
