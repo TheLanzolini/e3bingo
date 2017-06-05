@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Arial', 'sans-serif';
+  font-family: 'Impact', 'sans-serif';
 }
 
 #app {
@@ -45,12 +45,13 @@ h1 {
   text-align: center;
   border-right: 1px solid black;
   font-size: 28px;
+  letter-spacing: 1px;
   text-shadow:
-       1px 1px 0 #000000,
-     -1px -1px 0 #000000,
-      1px -1px 0 #000000,
-      -1px 1px 0 #000000,
-       1px 1px 0 #000000;
+       2px 2px 0 #000000,
+     -2px -2px 0 #000000,
+      2px -2px 0 #000000,
+      -2px 2px 0 #000000,
+       2px 2px 0 #000000;
    color: white;
 }
 
@@ -59,7 +60,7 @@ h1 {
 }
 
 .cell {
-  background-image: 100% 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
