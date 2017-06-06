@@ -71,7 +71,7 @@ function init(){
   var header = document.createElement('div');
   header.classList.add('header');
   var title = document.createElement('h1');
-  title.innerHTML = 'E3 BINGO!';
+  title.innerHTML = 'e3 BINGO!';
   header.appendChild(title);
   var about = document.createElement('a');
   about.classList.add('about');

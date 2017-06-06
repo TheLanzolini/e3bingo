@@ -3,8 +3,10 @@ html, body {
 }
 
 #app {
-  width: 960px;
+  width: 900px;
   margin: auto;
+  padding: 20px;
+  background-color: #F14632;
 }
 
 .header {
@@ -16,7 +18,7 @@ html, body {
   top: 5px;
   right: 5px;
   text-decoration: underline;
-  color: blue;
+  color: white;
 }
 
 .about:hover {
@@ -25,6 +27,9 @@ html, body {
 
 h1 {
   text-align: center;
+  color: white;
+  font-size: 52px;
+  margin: 0;
 }
 
 .table {
@@ -38,13 +43,13 @@ h1 {
 
 .cell {
   flex: 1;
-  min-height: 192px;
+  min-height: 178.8px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   border-right: 1px solid black;
-  font-size: 28px;
+  font-size: 26px;
   letter-spacing: 1px;
   text-shadow:
        2px 2px 0 #000000,
@@ -71,7 +76,11 @@ h1 {
 @media print{
   * {
     -webkit-print-color-adjust:exact;
-    -webkit-filter:opacity(1);
+    /*-webkit-filter:opacity(1);*/
+  }
+  .cell {
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
   }
   .about {
     display: none;
