@@ -69,5 +69,11 @@ h1 {
 }
 
 @media print{
-  * {-webkit-print-color-adjust:exact;}
+  * {
+    -webkit-print-color-adjust:exact;
+    -webkit-filter:opacity(1);
+  }
+  .about {
+    display: none;
+  }
 }
